@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom/client';
 import { createClient, WagmiConfig } from 'wagmi';
 import App from './App';
 import './index.css';
-import theme from './theme';
 
 const client = createClient({
   autoConnect: true,
@@ -15,7 +14,7 @@ const client = createClient({
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <WagmiConfig client={client}>
-      <ChakraProvider theme={theme}>
+      <ChakraProvider>
         <App />
       </ChakraProvider>
     </WagmiConfig>
